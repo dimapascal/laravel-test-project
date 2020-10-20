@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
-@section('contact')
+@section('title')Contact @endsection
+
+@section('content')
     <div>Welcome to contact page</div>
 @endsection
