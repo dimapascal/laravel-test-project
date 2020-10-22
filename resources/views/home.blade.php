@@ -8,5 +8,5 @@
 
 @section('header')
     @parent
-    <span>Now on: Home</span>
+    <span>Home</span>
 @endsection

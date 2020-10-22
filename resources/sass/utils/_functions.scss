@@ -1,0 +1,8 @@
+@function getMapValue($map, $mapValue) {
+    @if map-has-key($map, $mapValue) {
+        @return map-get($map, $mapValue);
+    }
+
+    @error "Unknown `#{$mapValue}` in #{map-get($map, "__mapDefaultKeyName")} map.";
+    @return null;
+}
