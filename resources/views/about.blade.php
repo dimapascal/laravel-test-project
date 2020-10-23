@@ -6,8 +6,3 @@
 @section('content')
     <div>Welcome to about page</div>
 @endsection
-
-@section('header')
-    @parent
-    <span>About</span>
-@endsection

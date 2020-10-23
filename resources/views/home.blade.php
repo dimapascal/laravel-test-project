@@ -5,8 +5,3 @@
 @section('content')
     <div>Welcome to home page</div>
 @endsection
-
-@section('header')
-    @parent
-    <span>Home</span>
-@endsection

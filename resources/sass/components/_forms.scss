@@ -1,0 +1,63 @@
+.contactForm {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    $contentMaxWidth: 700px;
+
+    .formError {
+        min-height: 140px;
+        width: $contentMaxWidth;
+        margin: 0 0 20px;
+
+        ul {
+            padding: 14px 30px 10px;
+            background: transparentize(getMapValue($color, 'blossomRed'), 0.6);
+            border-radius: 4px;
+            font-weight: 500;
+
+            li {
+                color: rgb(40, 32, 32);
+                padding-bottom: 4px;
+            }
+        }
+
+    }
+
+    form {
+        width: $contentMaxWidth;
+
+        .form-group {
+            margin-bottom: 12px;
+
+            label {
+                width: 100%;
+            }
+
+            input {
+                @include classicInput;
+            }
+
+            textarea {
+                @include classicInput;
+                height: 200px;
+                max-width: 100%;
+                min-width: 100%;
+            }
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background: getMapValue($color, 'blueRibbon');
+            color: getMapValue($color, 'martiniWhite');
+            font-weight: 900;
+            font-size: getMapValue($fontSize, 'subTitle');
+        }
+    }
+}

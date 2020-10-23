@@ -1,5 +1,6 @@
 header {
     width: 100%;
+    max-width: 100%;
     height: 60px;
     display: flex;
     align-items: center;
@@ -7,16 +8,14 @@ header {
     background: getMapValue($color, 'cinderellaLight');
     box-shadow: 0 0 10px #ccc;
 
-    p {
-        padding: 0 20px;
+    .title {
         min-width: 300px;
+        padding-left: 16px;
     }
 
-    .currentPage {
-        text-align: end;
-    }
 
     nav {
+        padding-right: 16px;
         display: flex;
         flex-direction: row;
 
