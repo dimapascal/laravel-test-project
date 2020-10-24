@@ -3,18 +3,16 @@
 @section('title')Contact @endsection
 
 @section('content')
+
+
     <div class="contactForm">
-        <div class="formError">
-        @if($errors->any())
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{$error}}</li>
-                @endforeach
-            </ul>
-        @endif
-</div>
-    <form action="{{route('contact-form')}}" method="post">
+        <form action="{{route('contact-form')}}" method="post">
+            <div class="mt-2">
+                @include('includes.message')
+            </div>
+
             @csrf
+            
             <div class="form-group">
                 <label for="name">Enter the name</label>
                 <input type="text" name="name" placeholder="Your name" id="name"/>
@@ -24,8 +22,8 @@
                 <input type="email" name="email" placeholder="Your email" id="email"/>
             </div>
             <div class="form-group">
-                <label for="subject">Enter title</label>
-                <input type="text" name="subject" placeholder="Title" id="subject"/>
+                <label for="subject">Enter subject</label>
+                <input type="text" name="subject" placeholder="Subject" id="subject"/>
             </div>
 
             <div class="form-group">

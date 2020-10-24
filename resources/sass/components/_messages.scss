@@ -1,0 +1,41 @@
+@mixin formMessage {
+    width: 100%;
+
+    p {
+        background: transparentize(getMapValue($color, 'blossomRed'), 0.2);
+        padding: 12px;
+        margin: 0;
+        border-radius: 4px;
+    }
+
+    ul {
+        padding: 14px 30px 10px;
+        background: transparentize(getMapValue($color, 'blossomRed'), 0.6);
+        border-radius: 4px;
+        font-weight: 500;
+        margin: 0;
+
+        li {
+            color: rgb(40, 32, 32);
+            padding-bottom: 4px;
+        }
+    }
+
+}
+
+.formError {
+    @include formMessage;
+}
+
+
+.formSuccess {
+    @include formMessage;
+
+    ul {
+        background: transparentize(getMapValue($color, 'fern'), 0.2);
+    }
+
+    p {
+        background: transparentize(getMapValue($color, 'fern'), 0.2);
+    }
+}

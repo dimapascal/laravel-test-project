@@ -3,5 +3,10 @@
 @section('title')Home @endsection
 
 @section('content')
-    <div>Welcome to home page</div>
+    <div>
+        @include('includes.message')
+        <p>
+            Welcome to home page
+        </p>    
+    </div>
 @endsection
