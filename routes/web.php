@@ -20,3 +20,6 @@ Route::get('/contact', function () {
 
 
 Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact-form');
+
+Route::get('/contact/all', [ContactController::class, 'getAllContacts'])->name('allContacts');
+Route::get('/contact/{id}', [ContactController::class, 'getContactById'])->name('contactById');

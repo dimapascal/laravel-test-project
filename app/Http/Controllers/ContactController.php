@@ -21,4 +21,13 @@ class ContactController extends Controller
 
         return redirect()->route('home')->with('success', "Message was send.");
     }
+
+    public function getAllContacts()
+    {
+        return view('allContacts', ['data' => Contact::all()]);
+    }
+    public function getContactById($id)
+    {
+        return view('oneContact', ['data' => Contact::find($id)]);
+    }
 }

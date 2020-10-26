@@ -1,0 +1,55 @@
+.contactList{
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    .contact{
+        background: transparentize( getMapValue($color, 'blueRibbon'),0.8);
+        margin-bottom: 20px;
+        border-radius: 6px;
+        border: 1px solid transparentize( getMapValue($color, 'blueRibbon'),0.7);;
+        width: 600px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        @mixin contactDefaultText {
+            font-size: getMapValue($fontSize, 'secondary');
+            font-weight: 500;
+            margin: 8px 20px;
+        }
+
+        &__subject{
+            @include contactDefaultText;
+            font-size: getMapValue($fontSize, 'title');
+            font-weight: 900;
+        }
+        &__email{
+            @include contactDefaultText;
+        }
+        &__time{
+            @include contactDefaultText;
+        }
+        &__text{
+            @include contactDefaultText;
+            color: black;
+            border: 1px solid #333;
+            border-radius: 6px;
+            padding: 4px;
+            min-height: 40px;
+        }
+        a{
+            
+            @include btn--primary;
+            display: block;
+            margin: 8px 20px;
+            margin-top: 15px;
+            padding: 10px;
+            width: 80px;
+            text-align: center;
+            font-size: getMapValue($fontSize, 'secondary');
+            text-decoration: none;
+        }
+    }
+}
